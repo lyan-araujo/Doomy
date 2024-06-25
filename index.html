@@ -4,77 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOOMY - Salão de Beleza</title>
-    <script src="https://kit.fontawesome.com/31fdff860f.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <article>
-        <div>
-            <img id="article_doomy-logo" src="IMG/doomy-icon-836-600.webp" alt="">
-            <h1 class="tl-1">Cortes, sombrancelha e muito mais!!</h1>
-            <p class="tx-1">Faça-nos uma visita e confira nossos mais diversos serviços:</p>            
-        </div>
+    <article class="container-fluid">
+        <div class="row justify-content-center mb-5 center-tx">
+            <img src="IMG/doomy-icon-836-600.webp" alt="" class="col-8 fadein" style="z-index: 1;">
+            <h1 class="col-12 color-2 fadein">Você já conhece nossos serviços?</h1>
 
-        <div id="servicos-box" class="tx-1">
-            <div class="servico-container">
-                <div class="servico-card">Cortes Unissex</div>
-                <div class="servico-card">Escova Modeladora</div>
-                <div class="servico-card">Sobrancelhas</div>
-                <div class="servico-card">Design/ Henna</div>
+            <div class="col-5 container ">
+                <div class="row">
+                    <h2 class="col-12 services-list-border color-2">Cabelos</h2>
+                    <div class="col-12">Alisamento Térmico</div>
+                    <div class="col-12">Cachos</div>
+                    <div class="col-12">Mechas</div>
+                    <div class="col-12">Colorimetria</div>
+                    <div class="col-12">Cortes Estilizados</div>
+                </div>
             </div>
-            <div class="servico-container">
-                <div class="servico-card">Correção Brilho Intensivo</div>
-                <div class="servico-card">Blindagem da Cor</div>
-                <div class="servico-card">Luzes</div>
-                <div class="servico-card">Sombre Hair</div>
-                <div class="servico-card">Balayage 3D</div>
+            <div class="col-5 container ">
+                <div class="row">
+                    <h2 class="col-12 services-list-border color-2">Rosto</h2>
+                    <div class="col-12">Designer de Sobramcelha</div>
+                    <div class="col-12">Hena</div>
+                    <div class="col-12">Depilação Buço</div>
+                </div>
             </div>
-            <div class="servico-container">
-                <div class="servico-card">Tratamentos Intensivos Termicos</div>
-                <div class="servico-card">Pro Age Molecular</div>
-                <div class="servico-card">Anti Age Cuticular</div>
-            </div>
-            <div class="servico-container">
-                <div class="servico-card">Alisamentos</div>
-                <div class="servico-card">Progressiva</div>
-                <div class="servico-card">Definitiva</div>
-            </div>
-        </div>
 
-        <div>
-            <h2 class="tl-1">Estamos nas redes sociais!</h2>
-            <p class="tx-1">Nos siga em sua rede social favorita e fique por dentro de nossos tratamentos, dicas e cuidados!</p>
-            <div id="post-carrossel"></div>
-            <div id="social-buttons-group">
-                <a class="social-button fa-brands fa-facebook" href="https://www.facebook.com/profile.php?id=100064013500980" target="_blank">Facebook</a>
-                <a class="social-button fa-brands fa-instagram" href="https://www.instagram.com/jenynepomuceno/" target="_blank">Instagram</a>
-                <a class="social-button fa-brands fa-whatsapp" href="https://wa.me/5513997584289" target="_blank">WhatsApp</a>
+            <div class="col-11 container my-4 ">
+                <div class="row services-list-border">
+                    <h2 class="col-12 color-2">Tratamento Capilar Integrativo</h2>
+                    <h3 class="col-12">Sinta o poder do equilibrio</h3>
+                </div>
             </div>
         </div>
 
-        <div>
-            <h2>Pertinho de você!</h2>
-            <h3><i><b>"Todo tempo é tempo de cuidar de sí!"</b></i></h3>
-            <p>Estamos abertos de <b>Segunda a Sábado</b> das <b>9:00 as 20:00</b></p>
-            <div id="small-calendar" class="mg-2">
-                <div class="small-calendar_weekday">dom</div>
-                <div class="small-calendar_weekday">seg</div>
-                <div class="small-calendar_weekday">ter</div>
-                <div class="small-calendar_weekday check">qua</div>
-                <div class="small-calendar_weekday">qui</div>
-                <div class="small-calendar_weekday">sex</div>
-                <div class="small-calendar_weekday">sab</div>
-            </div>
-            <div id="doomy-map-location">
-                <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.5191969314155!2d-47.558615425310606!3d-24.70904960475603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94daa3004df92669%3A0x97df3aee70d939cf!2sDoomy!5e0!3m2!1spt-BR!2sbr!4v1718661485794!5m2!1spt-BR!2sbr" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        <div class="row justify-content-center my-5 center-tx">
+            <h2 class="col-12">Siga nas Redes Sociais!</h2>
+            <button class="col-6 btn-social" onclick="window.open('https://www.facebook.com/profile.php?id=100064013500980','_blank')"><i class="fa-brands fa-square-facebook"></i> Facebook</button>
+            <div class="w-100"></div>
+            <button class="col-6 btn-social my-4" onclick="window.open('https://www.instagram.com/jenynepomuceno/','_blank')"><i class="fa-brands fa-instagram"></i> Instagram</button>
+            <div class="w-100"></div>
+            <button class="col-6 btn-social" onclick="window.open('https://wa.me/5513997584289','_blank')"><i class="fa-brands fa-whatsapp"></i> Whatsapp</button>
         </div>
 
-        <div>
-            <h2>ESPAÇO SEXSHOP</h2>
-            <h3><i><b>"Venha a Doomy e liberte seu instinto🔥"</b></i></h3>
+        <div class="row justify-content-center my-5 center-tx">
+            <h2 class="col-12">Vem pra <b class="color-2">Doomy</b></h2>
+            <h3 class="col-12"><i><b class="color-2">A Arte de Dominar</b></i></h3>
+            <p class="col-12">Aberto de <b>Segunda a Sábado</b> das <b>10:00 as 18:00</b></p>
+            <div class="col mb-4 mt-2">
+                <div id="week_container">
+                    <div class="weekday">dom</div>
+                    <div class="weekday">seg <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday">ter <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday daycheck">qua <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday wait">qui <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday">sex <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday">sab <i class="waitclock fa-regular fa-clock"></i></div>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.5191969314155!2d-47.558615425310606!3d-24.70904960475603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94daa3004df92669%3A0x97df3aee70d939cf!2sDoomy!5e0!3m2!1spt-BR!2sbr!4v1718661485794!5m2!1spt-BR!2sbr" sandbox="allow-scripts" width="800" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" async></iframe>
+            </div>
+            <h3 class="col-12 center-tx color-2"><a href="tel:+5513997584289"><b class="color-2"><b>Ligue e agende!</b><br>&#40;13&#41;99758-4289</a></h3>
+            <p class="col-12 center-tx color-2">Rua 9 de Julho, n° 20, Iguape - SP</p>
         </div>
     </article>
+    <div class="visual-corner top"></div>
+    <div class="visual-corner bottom"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/31fdff860f.js" crossorigin="anonymous"></script>
     <script src="JS/script.js"></script>
 </body>
 </html>
