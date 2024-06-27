@@ -62,30 +62,29 @@
             <h3 class="col-12"><i><b class="color-2">A Arte de Dominar</b></i></h3>
             <p class="col-12">Aberto de <b>Segunda a Sábado</b> das <b>10:00 as 18:00</b></p>
             <div class="col mb-4 mt-2">
-                <div id="week_container">
-                    <div class="weekday">dom</div>
-                    <div class="weekday" data-day="seg">seg <i class="waitclock fa-regular fa-clock"></i></div>
-                    <div class="weekday" data-day="ter">ter <i class="waitclock fa-regular fa-clock"></i></div>
-                    <div class="weekday" data-day="qua">qua <i class="waitclock fa-regular fa-clock"></i></div>
-                    <div class="weekday" data-day="qui">qui <i class="waitclock fa-regular fa-clock"></i></div>
-                    <div class="weekday" data-day="sex">sex <i class="waitclock fa-regular fa-clock"></i></div>
-                    <div class="weekday" data-day="sab">sab <i class="waitclock fa-regular fa-clock"></i></div>
+                <div id="week_container" hidden>
+                    <div class="weekday" data-day="0">dom</div>
+                    <div class="weekday" data-day="1">seg <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday" data-day="2">ter <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday" data-day="3">qua <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday" data-day="4">qui <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday" data-day="5">sex <i class="waitclock fa-regular fa-clock"></i></div>
+                    <div class="weekday" data-day="6">sab <i class="waitclock fa-regular fa-clock"></i></div>
                 </div>
             </div>
             <div class="col-12 mb-5 pointer">
                 <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.5191969314155!2d-47.558615425310606!3d-24.70904960475603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94daa3004df92669%3A0x97df3aee70d939cf!2sDoomy!5e0!3m2!1spt-BR!2sbr!4v1718661485794!5m2!1spt-BR!2sbr" sandbox="allow-scripts" width="800" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" async></iframe>
+                <div  onclick="window.open('https://maps.app.goo.gl/EkZd2MkXjeFd4eKA7','_blank')" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; user-select: none;"></div>
             </div>
             <h3 class="col-12 center-tx color-2"><a href="tel:+5513997584289"><b class="color-2 pointer"><b>Ligue e agende!</b><br>&#40;13&#41;99758-4289</a></h3>
             <p class="col-12 center-tx color-2">Rua 9 de Julho, n° 20, Iguape - SP</p>
         </div>
     </article>
-    <div class="visual-corner top"></div>
-    <div class="visual-corner bottom"></div>
-
+    
+    <script src="JS/calendar.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/31fdff860f.js" crossorigin="anonymous"></script>
-    <script src="JS/script.js"></script>
 </body>
 </html>
