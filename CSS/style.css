@@ -13,6 +13,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .bd-r {
@@ -169,7 +172,6 @@ article {
     border-radius: 1rem;
     box-shadow: -.5rem 2rem 0 .1rem var(--color-02);
     background-color: var(--color-02);
-    background-image: url('/IMG/doomy-icon-836-600.webp');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center;
