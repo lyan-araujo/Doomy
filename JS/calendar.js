@@ -56,7 +56,7 @@ function atualizaDiaAtual(day_value) {
 
 function atualizaHorario(hour_value) {
     if(hour_value < calendario.h_aberto) {
-        calendario.d_wait   = calendario.dia_atual;
+        calendario.d_wait   = calendario.dia_atual == 0 ? 1 : calendario.dia_atual;
 
     }else if(hour_value > calendario.h_fechado) {
         calendario.d_wait   = (calendario.dia_atual == 6 ? 1 : (calendario.dia_atual + 1));
@@ -100,7 +100,6 @@ function atualizaCalendario() {
         meta.setHours(0,0,0,500);
     }
 
-    console.log(meta - agora);
     setInterval(() => {
         atualizaCalendario();
     }, (meta - agora));
