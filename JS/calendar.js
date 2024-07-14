@@ -55,14 +55,24 @@ function atualizaDiaAtual(day_value) {
 }
 
 function atualizaHorario(hour_value) {
-    if(hour_value < calendario.h_aberto) {
-        calendario.d_wait   = calendario.dia_atual == 0 ? 1 : calendario.dia_atual;
+    let _dia_atual  = calendario.dia_atual;
 
-    }else if(hour_value > calendario.h_fechado) {
-        calendario.d_wait   = (calendario.dia_atual == 6 ? 1 : (calendario.dia_atual + 1));
-    } else {
-        calendario.d_wait   = null;
+    if(_dia_atual == 0) {
+        calendario.d_wait   = 1;
+        return;
+    } 
+
+    if(hour_value < calendario.h_aberto) {
+        calendario.d_wait   = _dia_atual;
+        return;
     }
+
+    if(hour_value > calendario.h_aberto) {
+        calendario.d_wait   = _dia_atual == 6 ? 1 : (calendario.dia_atual + 1);
+        return;
+    }
+
+    calendario.d_wait   = null;
 }
 
 function atualizaDayWait(wait_value) {
@@ -107,5 +117,5 @@ function atualizaCalendario() {
 
 window.onload   = function() {
     atualizaCalendario();
-    document.querySelector("#week_container").removeAttribute('hidden');
+    document.querySelector("#week_container").classList.remove('loading');
 }
