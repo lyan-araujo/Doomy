@@ -67,7 +67,7 @@ function atualizaHorario(hour_value) {
         return;
     }
 
-    if(hour_value > calendario.h_aberto) {
+    if(hour_value >= calendario.h_fechado) {
         calendario.d_wait   = _dia_atual == 6 ? 1 : (calendario.dia_atual + 1);
         return;
     }

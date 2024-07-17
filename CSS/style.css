@@ -18,6 +18,14 @@
     -webkit-user-select: none;
 }
 
+.captalize {
+    text-transform: capitalize;
+}
+
+.lst-stl {
+    list-style: none;
+}
+
 .bd-r {
     border: 1px solid red;
 }
@@ -73,12 +81,10 @@ article {
     border-radius: .5rem;
 }
 
-.btn-social:focus,
 .btn-social:hover {
     box-shadow: -.8rem .8rem 0 .1rem var(--color-02);
     background-color: var(--color-04);
     color: var(--color-03);
-    outline: none;
 }
 
 #week_container {

@@ -168,3 +168,13 @@
     pointer-events: none;
     overflow: hidden;
 }
+
+.img_card > .sc_icon {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 2rem;
+    height: 2rem;
+    filter: drop-shadow(0 0 4px black);
+    opacity: .6;
+}

@@ -33,8 +33,8 @@ class SliderWrapper extends HTMLDivElement {
 
     template() {
         return `
-        <button id="left" class="scroll_btn"><b>&#60;</b></button>
-        <button id="right" class="scroll_btn"><b>&#62;</b></button>
+        <button id="left" class="scroll_btn" tabindex="-1" aria-hidden="true"><b>&#60;</b></button>
+        <button id="right" class="scroll_btn" tabindex="-1" aria-hidden="true"><b>&#62;</b></button>
         `;
 
 ;
@@ -71,7 +71,8 @@ class CustomSlider extends HTMLDivElement {
     connectedCallback() {
         this.card_list   = [...this.querySelectorAll('.slide_box:not(.is_a_clone)')];
         this.addEventListener('scroll', this.infinitySlider);
-        window.onresize = () => this.updateValues();
+        window.addEventListener('resize', this.updateValues.bind(this));
+
         this.updateValues();
     }
     
@@ -102,9 +103,10 @@ class CustomSlider extends HTMLDivElement {
     }
 
     clearClones() {
+        console.log('ln 105');
         if(this.querySelector('.is_a_clone')) {
             this.querySelectorAll('.is_a_clone').forEach(_clone => {
-                _clone.remove();
+                _clone.parentNode.removeChild(_clone);
             });
         }
     }
@@ -184,12 +186,13 @@ class SliderBox extends HTMLDivElement {
     constructor() {
         super();
         this.classList.add('loading');
-        this.insertAdjacentElement('afterbegin', this.template());
+        if(this.childElementCount   === 0) {
+            this.insertAdjacentElement('afterbegin', this.template());
+        }
     }
 
     connectedCallback() {
         const figure    = this.querySelector('figure');
-        figure.onclick  = () => window.open(this.dataset.insta, '_blank');
     }
 
     disconnectedCallback() {
@@ -197,19 +200,30 @@ class SliderBox extends HTMLDivElement {
     }
 
     template() {
-        const figure    = document.createElement('figure');
-        figure.classList.add('img_card');
+        const social    = this.dataset.url.includes('instagram') ? 'instagram' : 'facebook';
+        const imgCard   = document.createElement('a');
+        imgCard.classList.add('img_card');
+        imgCard.href = this.dataset.url;
+        imgCard.ariaLabel   = `Link para post do ${social}`;
 
         const img   = document.createElement('img');
         img.src = this.dataset.imgh;
         img.style.backgroundImage   = `url(${this.dataset.imgh})`;
+        img.alt = "";
+        img.ariaHidden  = "true";
         img.onload = () => {
             this.classList.remove('loading');
         }
-        
-        figure.insertAdjacentElement('afterbegin', img);
 
-        return figure;
+        const icon  = document.createElement('img');
+        icon.src    = social == "instagram" ? './IMG/instagram-svg.svg' : './IMG/facebook-svg.svg';
+        icon.classList.add('sc_icon');
+        icon.ariaHidden = 'true';
+        
+        imgCard.insertAdjacentElement('afterbegin', img);
+        imgCard.insertAdjacentElement('afterbegin', icon);
+
+        return imgCard;
     }
 }
 
